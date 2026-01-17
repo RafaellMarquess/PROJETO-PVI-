@@ -54,6 +54,7 @@ concluído / acadêmico.
 Rafael Marques  
 Gabriel Mezalira Rohden  
 Kauã Fonseca Rocha
+
 Luís Henrique Scoz Panizzon
 
 ## Curso
