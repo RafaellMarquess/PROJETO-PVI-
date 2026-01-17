@@ -1,0 +1,125 @@
+/* ========================
+    PACOTES
+==========================*/
+
+#pacotes{
+    margin-top: 10vh;
+}
+
+#pacotesContainer{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center; 
+    align-items: stretch; 
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.pacoteCard {
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================
+   LISTA
+========================== */
+.pacoteCard ul{
+    flex: 1;
+    transition: transform 400ms ease, color 400ms ease;
+}
+
+.pacoteCard ul:hover{
+    transform: scale(0.9);
+    color: rgb(255, 255, 255);
+}
+
+ul {
+    margin-top: 8vh;
+    list-style-position: inside;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(96, 131, 131);
+}
+
+/* ==========================
+TÍTULO DO CARD
+========================== */
+
+.tituloCards{
+    position: absolute;
+    bottom: calc(100% - 66vh + 20px);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 7px 60px;
+    border-top: 8px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    background-color: rgb(78, 113, 113);
+    transition: opacity 70ms ease, transform 70ms ease;
+    pointer-events: none;
+}
+
+.pacoteCard ul:hover ~ .tituloCards {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+.cameraPacotes{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+/* ==========================
+   IMAGEM
+========================== */
+
+.imagemPacotes {
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    border: 4px solid black;
+}
+
+/* ==========================
+   PREÇOS
+========================== */
+
+.precos{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 7vh;
+    font-weight: 600;
+    background-color: rgba(7, 59, 59, 0.8);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.pacoteCard ul:hover ~ .precos {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.precos:hover{
+    color: aliceblue;
+    transform: scale(1.1);
+    transition: transform 500ms ease-in-out;
+}
